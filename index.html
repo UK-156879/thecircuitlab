@@ -297,6 +297,12 @@
         .workshop-item:hover { box-shadow: 0 4px 16px rgba(30,58,95,0.08); }
         .workshop-info h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; margin-bottom: 6px; }
         .workshop-details { display: flex; gap: 20px; font-size: 13px; color: #6B8AAB; flex-wrap: wrap; }
+        .workshop-item.has-photos { flex-direction: column; align-items: stretch; gap: 18px; }
+        .workshop-photos { display: flex; gap: 12px; flex-wrap: wrap; }
+        .workshop-photos img {
+          width: 180px; height: 120px; object-fit: cover; border-radius: 10px;
+          border: 1px solid rgba(74, 127, 181, 0.12); box-shadow: 0 2px 8px rgba(30,58,95,0.06);
+        }
         .workshop-level {
           padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
         }
@@ -528,13 +534,15 @@
       </a>
       <div class="nav-links">
         <button class="nav-link active" data-section="home">Home</button>
-        <button class="nav-link" data-section="learn">Learn</button>
+        <button class="nav-link" data-section="workshops">Workshops</button>
+        <button class="nav-link" data-section="team">Meet the Team</button>
       </div>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <button class="nav-link active" data-section="home">Home</button>
-      <button class="nav-link" data-section="learn">Learn</button>
+      <button class="nav-link" data-section="workshops">Workshops</button>
+      <button class="nav-link" data-section="team">Meet the Team</button>
     </div>
   </nav>
 
@@ -609,43 +617,52 @@
 
     <section class="featured">
       <div class="section-inner">
-        <div class="section-label">Featured This Week</div>
-        <div class="section-title">Project of the Week</div>
+        <div class="section-label">What's Next</div>
+        <div class="section-title">Upcoming Events</div>
+        <!-- EDIT ME: swap this card out once the next project/event is announced -->
         <div class="featured-card">
           <div>
-            <span class="featured-tag">Beginner Friendly</span>
-            <h3>Build a Simple LED Flashlight</h3>
-            <p>Learn the fundamentals of circuits by building your own LED flashlight from scratch. You will work with resistors, LEDs, batteries, and switches — and walk away with a working device you made yourself.</p>
-            <button class="btn-primary" style="background:#E8A838;color:#1E3A5F;">Try This Project →</button>
+            <span class="featured-tag">Stay Tuned</span>
+            <h3>New Projects Coming Soon</h3>
+            <p>We're planning our next hands-on workshop and project. Check back here soon for dates, details, and how to sign up!</p>
           </div>
-          <div class="featured-visual">💡</div>
+          <div class="featured-visual">🛠️</div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="workshops-section" style="scroll-margin-top:90px;">
       <div class="section-inner">
-        <div class="section-label">Upcoming Events</div>
-        <div class="section-title">Workshops</div>
-        <div class="section-desc">Join us for live, hands-on sessions where you will learn by doing. All skill levels welcome.</div>
+        <div class="section-label">Past Events</div>
+        <div class="section-title">Past Workshops</div>
+        <div class="section-desc">Take a look back at the hands-on sessions we've run so far. All skill levels welcome.</div>
         <div class="workshop-list">
-          <div class="workshop-item">
+          <div class="workshop-item has-photos">
             <div class="workshop-info">
               <h4> Simple Robot Car: Students will build a simple robot car using a motor and battery while learning how electrical energy is converted into motion and how circuits help control movement.</h4>
-              <div class="workshop-details"><span>📅 July 11, 2026</span><span>🕐 4:00 PM – 5:30 PM</span><span>📍 Online (Zoom)</span></div>
+              <div class="workshop-details"><span>📅 July 11, 2026</span><span>🕐 4:00 PM – 5:30 PM</span><span>📍 San Jose Public Library (Village Square Branch)</span></div>
+            </div>
+            <div class="workshop-photos">
+              <img src="images/robot-car-workshop-1.jpg" alt="Finished motorized robot car built from foam, a motor, and a battery pack">
+              <img src="images/robot-car-workshop-2.jpg" alt="Student assembling the robot car's motor and wiring">
+              <img src="images/robot-car-workshop-3.jpg" alt="Students presenting what happens if a wire connection in the circuit loosens">
             </div>
           </div>
-          <div class="workshop-item">
+          <div class="workshop-item has-photos">
             <div class="workshop-info">
               <h4>Homemade Battery Circuit: Students will make a simple battery from everyday materials and use it to light up an LED while learning how electricity flows through a circuit and powers the devices we use every day.</h4>
-              <div class="workshop-details"><span>📅 July 18, 2026</span><span>🕐 3:00 PM – 5:00 PM</span><span>📍 San Jose Public Library</span></div>
+              <div class="workshop-details"><span>📅 July 18, 2026</span><span>🕐 3:00 PM – 5:00 PM</span><span>📍 San Jose Public Library (Village Sqaure Branch)</span></div>
+            </div>
+            <div class="workshop-photos">
+              <img src="images/battery-circuit-workshop-1.jpg" alt="Materials set out for the homemade battery workshop: foil, pennies, wires, and a multimeter">
+              <img src="images/battery-circuit-workshop-2.jpg" alt="Foil and penny battery cells set up in trays for testing">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="background:white;">
+    <section id="team-section" style="background:white;scroll-margin-top:90px;">
       <div class="section-inner">
         <div class="section-label">Our People</div>
         <div class="section-title">Meet the Team</div>
@@ -690,6 +707,15 @@
         </div>
       </div>
     </section>
+
+    <section style="background:linear-gradient(135deg, #1E3A5F 0%, #2B5A8F 100%);">
+      <div class="section-inner" style="text-align:center;">
+        <div class="section-label" style="color:#E8A838;">Get In Touch</div>
+        <div class="section-title" style="color:white;">Connect With Us</div>
+        <div class="section-desc" style="color:rgba(255,255,255,0.8); margin:0 auto 32px;">Follow along for workshop updates, project photos, and what's coming next.</div>
+        <a href="https://instagram.com/thecircuitlab" target="_blank" rel="noopener" class="btn-primary" style="background:#E8A838;color:#1E3A5F;display:inline-block;text-decoration:none;">📷 Follow us on Instagram</a>
+      </div>
+    </section>
   </div>
 
   <!-- LEARN -->
@@ -719,11 +745,11 @@
         <a href="#" data-section="learn">Video Library</a>
         <a href="#" data-section="learn">Articles</a>
         <a href="#" data-section="learn">Quizzes</a>
-        <a href="#" data-section="home">Workshops</a>
+        <a href="#" data-section="workshops">Workshops</a>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
-        <div class="social-links"><div class="social-link">📷</div><div class="social-link">▶</div><div class="social-link">✉</div></div>
+        <div class="social-links"><a class="social-link" href="https://instagram.com/thecircuitlab" target="_blank" rel="noopener">📷</a><div class="social-link">▶</div><div class="social-link">✉</div></div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -742,14 +768,30 @@
   var learnSection = document.getElementById('learn-section');
 
   function showSection(id){
-    if(id === 'learn'){ homeSection.style.display='none'; learnSection.style.display='block'; }
-    else { homeSection.style.display='block'; learnSection.style.display='none'; }
     document.querySelectorAll('.nav-link').forEach(function(b){
       b.classList.toggle('active', b.getAttribute('data-section') === id);
     });
     mobileMenu.classList.remove('open');
     hamburger.classList.remove('open');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if(id === 'learn'){
+      homeSection.style.display='none'; learnSection.style.display='block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    homeSection.style.display='block'; learnSection.style.display='none';
+
+    if(id === 'home'){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    // in-page anchors: "workshops" -> #workshops-section, "team" -> #team-section
+    var targetEl = document.getElementById(id + '-section');
+    if(targetEl){
+      setTimeout(function(){ targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 30);
+    }
   }
 
   document.querySelectorAll('[data-section]').forEach(function(el){
